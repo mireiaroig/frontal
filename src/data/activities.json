@@ -1,0 +1,62 @@
+[
+    {
+        "id": "proj_5",
+        "title": "Hackathon Escolar de Ciberseguretat",
+        "description": "Participació en un repte Capture The Flag (CTF). Desxifrat d'un missatge xifrat amb Cèsar i creació de protocols en xarxes locals.",
+        "date": "2026-03-12",
+        "xp_gained": {
+            "computational": 120,
+            "engineering": 0,
+            "cognitive": 85,
+            "transversal": 60
+        }
+    },
+    {
+        "id": "proj_4",
+        "title": "Sensor Intel·ligent de Reciclatge",
+        "description": "Programació d'una placa Arduino connectada a un sensor d'ultrasons i càmera vision per classificar i obrir la brossa correcta automàticament.",
+        "date": "2026-03-08",
+        "xp_gained": {
+            "computational": 70,
+            "engineering": 100,
+            "cognitive": 40,
+            "transversal": 25
+        }
+    },
+    {
+        "id": "proj_3",
+        "title": "Desenvolupament App Realitat Virtual",
+        "description": "Primera incursió amb el motor Unity. Creació d'un entorn escolar VR de baixos polígons on pots agafar objectes i llançar-los usant físiques.",
+        "date": "2026-02-22",
+        "xp_gained": {
+            "computational": 90,
+            "engineering": 40,
+            "cognitive": 50,
+            "transversal": 110
+        }
+    },
+    {
+        "id": "proj_2",
+        "title": "Joc de la Serp amb Pygame",
+        "description": "Sessions de programació per recrear el clàssic joc Snake utilitzant la llibreria Pygame de Python.",
+        "date": "2026-02-18",
+        "xp_gained": {
+            "computational": 60,
+            "engineering": 0,
+            "cognitive": 30,
+            "transversal": 0
+        }
+    },
+    {
+        "id": "proj_1",
+        "title": "Braç Robòtic Hidràulic",
+        "description": "Construcció pas a pas d'un braç robòtic mogut per la pressió d'aigua de xeringues connectades.",
+        "date": "2026-02-05",
+        "xp_gained": {
+            "computational": 10,
+            "engineering": 50,
+            "cognitive": 20,
+            "transversal": 30
+        }
+    }
+]

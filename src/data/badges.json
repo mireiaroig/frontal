@@ -1,0 +1,51 @@
+[
+    {
+        "id": "first_login",
+        "name": "Primera Connexió",
+        "description": "Has accedit al teu escriptori central.",
+        "icon": "Zap",
+        "unlocked": true
+    },
+    {
+        "id": "bug_hunter",
+        "name": "Caçador de Bugs",
+        "description": "Supera amb èxit el minijoc d'encontrar bugs.",
+        "icon": "Bug",
+        "unlocked": false
+    },
+    {
+        "id": "glow_badge",
+        "name": "Llum Pròpia",
+        "description": "Converteix-te en un referent, el teu avatar ara brilla.",
+        "icon": "Sun",
+        "unlocked": true
+    },
+    {
+        "id": "team_player",
+        "name": "Jugador d'Equip",
+        "description": "Ajudes activament als companys en projectes.",
+        "icon": "Users",
+        "unlocked": false
+    },
+    {
+        "id": "custom_avatar",
+        "name": "Canvia-Cares",
+        "description": "Ara pots canviar i pujar la teva pròpia foto d'Avatar.",
+        "icon": "Image",
+        "unlocked": true
+    },
+    {
+        "id": "ui_colors",
+        "name": "Pintor Digital",
+        "description": "Desbloqueja la capacitat de canviar el color de la teva interfície.",
+        "icon": "Palette",
+        "unlocked": false
+    },
+    {
+        "id": "custom_nick",
+        "name": "Forjador de Noms",
+        "description": "Tria un Nickname completament totalment únic.",
+        "icon": "PenTool",
+        "unlocked": true
+    }
+]

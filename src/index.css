@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+}
+
+:root,
+.theme-electric {
+  --color-electric: #0047AB;
+  /* Electric Blue */
+  --color-accent: #FFD700;
+  /* Volt Yellow */
+}
+
+.theme-neon {
+  --color-electric: #10B981;
+  /* Emerald/Cyber Green */
+  --color-accent: #34D399;
+  /* Light Emerald */
+}
+
+.theme-purple {
+  --color-electric: #7C3AED;
+  /* Violet/Plasma Purple */
+  --color-accent: #C084FC;
+  /* Light Purple */
+}
+
+.theme-crimson {
+  --color-electric: #DC2626;
+  /* Crimson Red */
+  --color-accent: #FCA5A5;
+  /* Light Red */
+}
+
+/* Custom scrollbar to look sleek */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}

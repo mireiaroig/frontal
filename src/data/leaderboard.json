@@ -1,0 +1,45 @@
+[
+    {
+        "rank": 39,
+        "name": "Elena S.",
+        "xp": 520,
+        "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=Elena"
+    },
+    {
+        "rank": 40,
+        "name": "Marc T.",
+        "xp": 495,
+        "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=Marc"
+    },
+    {
+        "rank": 41,
+        "name": "Sofia L.",
+        "xp": 480,
+        "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=Sofia"
+    },
+    {
+        "rank": 42,
+        "name": "Guillem M.",
+        "xp": 450,
+        "isUser": true,
+        "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=Rayo"
+    },
+    {
+        "rank": 43,
+        "name": "Pol J.",
+        "xp": 410,
+        "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=Pol"
+    },
+    {
+        "rank": 44,
+        "name": "Carla R.",
+        "xp": 390,
+        "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=Carla"
+    },
+    {
+        "rank": 45,
+        "name": "Jan D.",
+        "xp": 350,
+        "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=Jan"
+    }
+]

@@ -1,232 +1,232 @@
 [
-    {
-        "id": "computational",
-        "name": "Pensament Computacional",
-        "global_level": 75,
-        "categories": [
-            {
-                "name": "Pensament computacional i lògica",
-                "sub_skills": [
-                    {
-                        "name": "Algoritmització",
-                        "score": 80
-                    },
-                    {
-                        "name": "Seqüenciació",
-                        "score": 85
-                    },
-                    {
-                        "name": "Reconeixement de patrons",
-                        "score": 70
-                    },
-                    {
-                        "name": "Descomposició",
-                        "score": 75
-                    },
-                    {
-                        "name": "Abstracció",
-                        "score": 85
-                    },
-                    {
-                        "name": "Lògica Condicional",
-                        "score": 90
-                    },
-                    {
-                        "name": "Iteració (Loops)",
-                        "score": 70
-                    },
-                    {
-                        "name": "Gestió de Variables",
-                        "score": 80
-                    },
-                    {
-                        "name": "Depuració (Debugging)",
-                        "score": 65
-                    },
-                    {
-                        "name": "Paral·lelisme",
-                        "score": 50
-                    },
-                    {
-                        "name": "Esdeveniments (Events)",
-                        "score": 85
-                    },
-                    {
-                        "name": "Operadors Lògics",
-                        "score": 75
-                    }
-                ]
-            }
+  {
+    "id": "computational",
+    "name": "Pensament Computacional",
+    "global_level": 11,
+    "categories": [
+      {
+        "name": "Pensament computacional i lògica",
+        "sub_skills": [
+          {
+            "name": "Algoritmització",
+            "score": 28
+          },
+          {
+            "name": "Seqüenciació",
+            "score": 0
+          },
+          {
+            "name": "Reconeixement de patrons",
+            "score": 12
+          },
+          {
+            "name": "Descomposició",
+            "score": 0
+          },
+          {
+            "name": "Abstracció",
+            "score": 0
+          },
+          {
+            "name": "Lògica Condicional",
+            "score": 14
+          },
+          {
+            "name": "Iteració (Loops)",
+            "score": 1
+          },
+          {
+            "name": "Gestió de Variables",
+            "score": 23
+          },
+          {
+            "name": "Depuració (Debugging)",
+            "score": 5
+          },
+          {
+            "name": "Paral·lelisme",
+            "score": 27
+          },
+          {
+            "name": "Esdeveniments (Events)",
+            "score": 4
+          },
+          {
+            "name": "Operadors Lògics",
+            "score": 27
+          }
         ]
-    },
-    {
-        "id": "engineering",
-        "name": "Enginyeria i Robòtica",
-        "global_level": 65,
-        "categories": [
-            {
-                "name": "Enginyeria i pensament espacial",
-                "sub_skills": [
-                    {
-                        "name": "Visió Espacial",
-                        "score": 70
-                    },
-                    {
-                        "name": "Comprensió de Mecanismes",
-                        "score": 80
-                    },
-                    {
-                        "name": "Transmissió de Moviment",
-                        "score": 75
-                    },
-                    {
-                        "name": "Estabilitat Estructural",
-                        "score": 60
-                    },
-                    {
-                        "name": "Ús de Sensors",
-                        "score": 85
-                    },
-                    {
-                        "name": "Sincronització Mecànica",
-                        "score": 65
-                    },
-                    {
-                        "name": "Modelatge 3D",
-                        "score": 70
-                    },
-                    {
-                        "name": "Prototipatge Ràpid",
-                        "score": 80
-                    },
-                    {
-                        "name": "Orientació en Coordenades",
-                        "score": 55
-                    },
-                    {
-                        "name": "Ergonomia de Disseny",
-                        "score": 60
-                    }
-                ]
-            }
+      }
+    ]
+  },
+  {
+    "id": "engineering",
+    "name": "Enginyeria i Robòtica",
+    "global_level": 13,
+    "categories": [
+      {
+        "name": "Enginyeria i pensament espacial",
+        "sub_skills": [
+          {
+            "name": "Visió Espacial",
+            "score": 29
+          },
+          {
+            "name": "Comprensió de Mecanismes",
+            "score": 7
+          },
+          {
+            "name": "Transmissió de Moviment",
+            "score": 7
+          },
+          {
+            "name": "Estabilitat Estructural",
+            "score": 8
+          },
+          {
+            "name": "Ús de Sensors",
+            "score": 3
+          },
+          {
+            "name": "Sincronització Mecànica",
+            "score": 27
+          },
+          {
+            "name": "Modelatge 3D",
+            "score": 2
+          },
+          {
+            "name": "Prototipatge Ràpid",
+            "score": 5
+          },
+          {
+            "name": "Orientació en Coordenades",
+            "score": 19
+          },
+          {
+            "name": "Ergonomia de Disseny",
+            "score": 23
+          }
         ]
-    },
-    {
-        "id": "cognitive",
-        "name": "Habilitats Cognitives",
-        "global_level": 82,
-        "categories": [
-            {
-                "name": "Habilitats cognitives i de recerca",
-                "sub_skills": [
-                    {
-                        "name": "Pensament Crític",
-                        "score": 85
-                    },
-                    {
-                        "name": "Atenció als detalls",
-                        "score": 75
-                    },
-                    {
-                        "name": "Presa de decisions",
-                        "score": 80
-                    },
-                    {
-                        "name": "Planificació estratègica",
-                        "score": 70
-                    },
-                    {
-                        "name": "Aprenentatge per Prova/Error",
-                        "score": 90
-                    },
-                    {
-                        "name": "Flexibilitat Mental",
-                        "score": 85
-                    },
-                    {
-                        "name": "Memòria de Treball",
-                        "score": 75
-                    },
-                    {
-                        "name": "Curiositat Investigadora",
-                        "score": 95
-                    }
-                ]
-            }
+      }
+    ]
+  },
+  {
+    "id": "cognitive",
+    "name": "Habilitats Cognitives",
+    "global_level": 17,
+    "categories": [
+      {
+        "name": "Habilitats cognitives i de recerca",
+        "sub_skills": [
+          {
+            "name": "Pensament Crític",
+            "score": 6
+          },
+          {
+            "name": "Atenció als detalls",
+            "score": 25
+          },
+          {
+            "name": "Presa de decisions",
+            "score": 24
+          },
+          {
+            "name": "Planificació estratègica",
+            "score": 2
+          },
+          {
+            "name": "Aprenentatge per Prova/Error",
+            "score": 11
+          },
+          {
+            "name": "Flexibilitat Mental",
+            "score": 28
+          },
+          {
+            "name": "Memòria de Treball",
+            "score": 25
+          },
+          {
+            "name": "Curiositat Investigadora",
+            "score": 15
+          }
         ]
-    },
-    {
-        "id": "transversal",
-        "name": "Habilitats Transversals",
-        "global_level": 78,
-        "categories": [
-            {
-                "name": "Soft Skills",
-                "sub_skills": [
-                    {
-                        "name": "Col·laboració (Peer Programming)",
-                        "score": 85
-                    },
-                    {
-                        "name": "Comunicació Assertiva",
-                        "score": 75
-                    },
-                    {
-                        "name": "Lideratge Distribuït",
-                        "score": 70
-                    },
-                    {
-                        "name": "Repartiment de Tasques",
-                        "score": 80
-                    },
-                    {
-                        "name": "Empatia",
-                        "score": 85
-                    },
-                    {
-                        "name": "Resiliència",
-                        "score": 90
-                    }
-                ]
-            },
-            {
-                "name": "Competència Lingüística",
-                "sub_skills": [
-                    {
-                        "name": "Vocabulari Tècnic Específic",
-                        "score": 70
-                    },
-                    {
-                        "name": "Descripció de Processos",
-                        "score": 65
-                    },
-                    {
-                        "name": "Interacció Oral Funcional",
-                        "score": 60
-                    },
-                    {
-                        "name": "Lectura de Simbologia i Text",
-                        "score": 80
-                    }
-                ]
-            },
-            {
-                "name": "Creativitat i Expressió",
-                "sub_skills": [
-                    {
-                        "name": "Personalització (Customization)",
-                        "score": 90
-                    },
-                    {
-                        "name": "Storytelling Digital",
-                        "score": 85
-                    },
-                    {
-                        "name": "Disseny Estètic",
-                        "score": 80
-                    }
-                ]
-            }
+      }
+    ]
+  },
+  {
+    "id": "transversal",
+    "name": "Habilitats Transversals",
+    "global_level": 13,
+    "categories": [
+      {
+        "name": "Soft Skills",
+        "sub_skills": [
+          {
+            "name": "Col·laboració (Peer Programming)",
+            "score": 17
+          },
+          {
+            "name": "Comunicació Assertiva",
+            "score": 28
+          },
+          {
+            "name": "Lideratge Distribuït",
+            "score": 17
+          },
+          {
+            "name": "Repartiment de Tasques",
+            "score": 0
+          },
+          {
+            "name": "Empatia",
+            "score": 7
+          },
+          {
+            "name": "Resiliència",
+            "score": 1
+          }
         ]
-    }
+      },
+      {
+        "name": "Competència Lingüística",
+        "sub_skills": [
+          {
+            "name": "Vocabulari Tècnic Específic",
+            "score": 11
+          },
+          {
+            "name": "Descripció de Processos",
+            "score": 12
+          },
+          {
+            "name": "Interacció Oral Funcional",
+            "score": 23
+          },
+          {
+            "name": "Lectura de Simbologia i Text",
+            "score": 21
+          }
+        ]
+      },
+      {
+        "name": "Creativitat i Expressió",
+        "sub_skills": [
+          {
+            "name": "Personalització (Customization)",
+            "score": 24
+          },
+          {
+            "name": "Storytelling Digital",
+            "score": 1
+          },
+          {
+            "name": "Disseny Estètic",
+            "score": 14
+          }
+        ]
+      }
+    ]
+  }
 ]

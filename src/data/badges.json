@@ -11,7 +11,8 @@
         "name": "Caçador de Bugs",
         "description": "Supera amb èxit el minijoc d'encontrar bugs.",
         "icon": "Bug",
-        "unlocked": false
+        "unlocked": false,
+        "unlockLevel": 6
     },
     {
         "id": "glow_badge",
@@ -25,11 +26,12 @@
         "name": "Jugador d'Equip",
         "description": "Ajudes activament als companys en projectes.",
         "icon": "Users",
-        "unlocked": false
+        "unlocked": false,
+        "unlockLevel": 5
     },
     {
         "id": "custom_avatar",
-        "name": "Canvia-Cares",
+        "name": "Modificar avatar",
         "description": "Ara pots canviar i pujar la teva pròpia foto d'Avatar.",
         "icon": "Image",
         "unlocked": true
@@ -39,11 +41,12 @@
         "name": "Pintor Digital",
         "description": "Desbloqueja la capacitat de canviar el color de la teva interfície.",
         "icon": "Palette",
-        "unlocked": false
+        "unlocked": false,
+        "unlockLevel": 4
     },
     {
         "id": "custom_nick",
-        "name": "Forjador de Noms",
+        "name": "Mòdul d'identificació",
         "description": "Tria un Nickname completament totalment únic.",
         "icon": "PenTool",
         "unlocked": true

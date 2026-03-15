@@ -4,12 +4,16 @@ import { X, Image as ImageIcon, Palette, PenTool, Lock } from 'lucide-react';
 export default function CustomizationModal({ user, badges, onClose, onUpdateAvatar, onUpdateNick, onUpdateTheme }) {
     const [newNick, setNewNick] = useState(user.nick);
 
-    // Customization presets
+    // Customization presets (8 distinct colorful robots)
     const avatars = [
-        "https://api.dicebear.com/7.x/bottts/svg?seed=Rayo",
-        "https://api.dicebear.com/7.x/bottts/svg?seed=Spark",
-        "https://api.dicebear.com/7.x/bottts/svg?seed=Volt",
-        "https://api.dicebear.com/7.x/bottts/svg?seed=Circuit"
+        "https://api.dicebear.com/7.x/bottts/svg?seed=Guillem&baseColor=ef4444", // Red Robot
+        "https://api.dicebear.com/7.x/bottts/svg?seed=Alpha&baseColor=22c55e",  // Green Robot
+        "https://api.dicebear.com/7.x/bottts/svg?seed=Beta&baseColor=3b82f6",   // Blue Robot
+        "https://api.dicebear.com/7.x/bottts/svg?seed=Delta&baseColor=eab308",  // Yellow Robot
+        "https://api.dicebear.com/7.x/bottts/svg?seed=Gamma&baseColor=a855f7",  // Purple Robot
+        "https://api.dicebear.com/7.x/bottts/svg?seed=Zeta&baseColor=f97316",   // Orange Robot
+        "https://api.dicebear.com/7.x/bottts/svg?seed=Omega&baseColor=ec4899",  // Pink Robot
+        "https://api.dicebear.com/7.x/bottts/svg?seed=Sigma&baseColor=06b6d4"   // Cyan Robot
     ];
 
     const themes = [
@@ -49,22 +53,22 @@ export default function CustomizationModal({ user, badges, onClose, onUpdateAvat
                     <section>
                         <div className="flex items-center gap-2 mb-3">
                             <ImageIcon className={hasBadge('custom_avatar') ? 'text-electricBlue' : 'text-slate-400'} size={20} />
-                            <h3 className={`font-bold ${hasBadge('custom_avatar') ? 'text-slate-800' : 'text-slate-400'}`}>Canvi de Carcassa</h3>
+                            <h3 className={`font-bold ${hasBadge('custom_avatar') ? 'text-slate-800' : 'text-slate-400'}`}>Canvi d'Avatar</h3>
                             {!hasBadge('custom_avatar') && <Lock size={14} className="text-slate-400" />}
                         </div>
 
                         <div className={`grid grid-cols-4 gap-3 ${!hasBadge('custom_avatar') && 'opacity-50 pointer-events-none'}`}>
-                            {avatars.map(url => (
+                            {avatars.map((url, i) => (
                                 <button
-                                    key={url}
+                                    key={i}
                                     onClick={() => onUpdateAvatar(url)}
-                                    className={`aspect-square rounded-2xl border-2 overflow-hidden transition-all hover:scale-105 ${user.avatar_url === url ? 'border-electricBlue shadow-md ring-2 ring-blue-100' : 'border-slate-100 bg-slate-50 hover:border-blue-200'}`}
+                                    className={`aspect-square rounded-2xl border-2 overflow-hidden transition-all hover:scale-105 flex items-center justify-center p-2 bg-slate-50 ${user.avatar_url === url ? 'border-electricBlue shadow-md ring-2 ring-blue-100' : 'border-slate-100 hover:border-blue-200'}`}
                                 >
-                                    <img src={url} alt="avatar option" className="w-full h-full object-cover p-1" />
+                                    <img src={url} alt="avatar option" className="w-full h-full object-contain drop-shadow-sm" />
                                 </button>
                             ))}
                         </div>
-                        {!hasBadge('custom_avatar') && <p className="text-xs text-slate-400 mt-2 font-medium">Bloquejat. Necessites aconseguir l'insígnia "Canvia-Cares".</p>}
+                        {!hasBadge('custom_avatar') && <p className="text-xs text-slate-400 mt-2 font-medium">Bloquejat. Necessites aconseguir l'insígnia "Modificar avatar".</p>}
                     </section>
 
                     {/* Theme Section */}

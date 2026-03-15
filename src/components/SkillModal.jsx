@@ -13,8 +13,8 @@ export default function SkillModal({ skill, onClose }) {
             ></div>
 
             {/* Modal Content */}
-            <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-sm overflow-hidden animate-in fade-in zoom-in duration-300">
-                <div className="bg-electricBlue p-6 flex justify-between items-start">
+            <div className="relative bg-white rounded-3xl shadow-2xl w-[95vw] max-w-5xl overflow-hidden animate-in fade-in zoom-in duration-300">
+                <div className="bg-electricBlue p-6 sm:p-8 flex justify-between items-start">
                     <div>
                         <h2 className="text-2xl font-black text-white">{skill.name}</h2>
                         <p className="text-blue-200 mt-1 font-medium">Nivell Global: {skill.global_level}%</p>
@@ -27,8 +27,9 @@ export default function SkillModal({ skill, onClose }) {
                     </button>
                 </div>
 
-                <div className="p-6 flex flex-col gap-6 max-h-[60vh] overflow-y-auto">
-                    {skill.categories.map((category, catIdx) => (
+                <div className="p-6 sm:p-8 flex flex-col gap-8 max-h-[70vh] overflow-y-auto">
+                    <div className="flex flex-col gap-8 w-full">
+                        {skill.categories.map((category, catIdx) => (
                         <div key={catIdx} className="flex flex-col gap-4">
                             {/* Category Header (només si en té més d'una o voleu sempre mostrar el títol del sub-eix) */}
                             {skill.categories.length > 1 && (
@@ -40,11 +41,11 @@ export default function SkillModal({ skill, onClose }) {
                             <div className="flex flex-col gap-4">
                                 {category.sub_skills.map((sub, idx) => (
                                     <div key={idx} className="flex flex-col gap-2">
-                                        <div className="flex justify-between items-center text-sm font-bold text-slate-700">
+                                        <div className="flex justify-between items-center text-base sm:text-lg font-bold text-slate-700">
                                             <span>{sub.name}</span>
                                             <span className="text-electricBlue">{sub.score}%</span>
                                         </div>
-                                        <div className="h-2.5 w-full bg-slate-100 rounded-full overflow-hidden shadow-inner flex-shrink-0">
+                                        <div className="h-4 sm:h-5 w-full bg-slate-100 rounded-full overflow-hidden shadow-inner flex-shrink-0">
                                             <div
                                                 className="h-full bg-voltYellow rounded-full"
                                                 style={{ width: `${sub.score}%` }}
@@ -55,6 +56,7 @@ export default function SkillModal({ skill, onClose }) {
                             </div>
                         </div>
                     ))}
+                    </div>
                 </div>
 
                 <div className="bg-slate-50 p-4 border-t border-slate-100 text-center">

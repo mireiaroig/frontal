@@ -19,28 +19,33 @@ function App() {
   const [user, setUser] = useState({ ...userData, theme: 'electric' });
   const [showCustomization, setShowCustomization] = useState(false);
   const [activeTab, setActiveTab] = useState('dashboard');
+  const getNextLevelXP = (level) => {
+    const thresholds = [0, 200, 500, 1000, 1500, 2500, 4000];
+    if (level < thresholds.length) return thresholds[level];
+    return thresholds[thresholds.length - 1] + (level - thresholds.length + 1) * 2000;
+  };
 
   const addXP = (amount) => {
     setUser(prev => {
-      let newXp = prev.xp + amount;
+      let totalXp = prev.xp + amount;
       let newLevel = prev.level;
       let nextLevelXp = prev.next_level_xp;
-      if (newXp >= nextLevelXp) {
+
+      while (totalXp >= nextLevelXp) {
         newLevel += 1;
-        newXp = newXp - nextLevelXp;
-        nextLevelXp = Math.floor(nextLevelXp * 1.5);
+        nextLevelXp = getNextLevelXP(newLevel);
       }
-      return { ...prev, xp: newXp, level: newLevel, next_level_xp: nextLevelXp };
+      return { ...prev, xp: totalXp, level: newLevel, next_level_xp: nextLevelXp };
     });
   };
 
-  const deductVoltCoins = (amount) => {
-    setUser(prev => ({ ...prev, voltcoins: Math.max(0, prev.voltcoins - amount) }));
+  const deductEnergy = (amount) => {
+    setUser(prev => ({ ...prev, energy: Math.max(0, prev.energy - amount) }));
   };
 
   const tabs = [
     { id: 'dashboard', label: 'Escriptori', Icon: LayoutDashboard },
-    { id: 'history', label: 'Historial', Icon: History },
+    { id: 'history', label: "Historial de l'alumne", Icon: History },
     { id: 'arcade', label: 'Arcade', Icon: Gamepad2 }
   ];
 
@@ -56,15 +61,15 @@ function App() {
     <div className={`h-screen bg-slate-50 text-slate-900 flex flex-col overflow-hidden theme-${user.theme}`}>
       <Navbar user={user} onAvatarClick={() => setShowCustomization(true)} />
 
-      <main className="flex-1 overflow-y-auto w-full relative">
-        <div className="max-w-4xl mx-auto p-4 md:p-6 lg:p-8 pb-20">
+      <main className="flex-1 overflow-y-auto bg-slate-50 p-6 lg:p-8 xl:px-12 pb-24 lg:pb-8 flex flex-col items-center">
+        <div className="w-full max-w-7xl mx-auto flex flex-col gap-6">
           {activeTab === 'dashboard' && <Dashboard user={user} skills={skillsData} badges={badgesData} leaderboard={leaderboardData} />}
           {activeTab === 'history' && <ActivityHistory activities={activitiesData} behavior={behaviorData} />}
-          {activeTab === 'arcade' && <Arcade addXP={addXP} deductVoltCoins={deductVoltCoins} user={user} />}
+          {activeTab === 'arcade' && <Arcade deductEnergy={deductEnergy} user={user} />}
         </div>
       </main>
 
-      <nav className="bg-white border-t border-slate-200 shadow-[0_-10px_20px_-10px_rgba(0,0,0,0.1)] z-40 shrink-0 w-full pb-safe">
+      <nav className="bg-white border-t border-slate-200 shadow-[0_-10px_20px_-10px_rgba(0,0,0,0.1)] z-40 shrink-0 w-full pb-safe mt-auto">
         <div className="max-w-4xl mx-auto px-4">
           <ul className="flex justify-around py-3">
             {tabs.map(({ id, label, Icon }) => (

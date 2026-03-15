@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Gamepad2, Bug, Zap, Lock, Code2 } from 'lucide-react';
+import { Gamepad2, Bug, Zap, Lock, Code2, Battery, Target } from 'lucide-react';
 import FindTheBugGame from './FindTheBugGame';
 
-export default function Arcade({ addXP, deductVoltCoins, user }) {
+export default function Arcade({ addXP, deductEnergy, user }) {
     const [activeGame, setActiveGame] = useState(null);
 
     if (activeGame === 'bug-finder') {
@@ -14,7 +14,7 @@ export default function Arcade({ addXP, deductVoltCoins, user }) {
                 >
                     ← Tornar als Jocs
                 </button>
-                <FindTheBugGame addXP={addXP} deductVoltCoins={deductVoltCoins} user={user} onBack={() => setActiveGame(null)} />
+                <FindTheBugGame addXP={addXP} deductEnergy={deductEnergy} user={user} onBack={() => setActiveGame(null)} />
             </div>
         );
     }
@@ -29,10 +29,24 @@ export default function Arcade({ addXP, deductVoltCoins, user }) {
                 </div>
                 <div className="relative z-10">
                     <h2 className="text-3xl font-black mb-2 tracking-tight">Sala Arcade</h2>
-                    <p className="text-blue-100 font-medium max-w-sm">Juga minijocs tècnics per guanyar experiència. Vigila l'energia, cada partida costa VoltCoins!</p>
+                    <p className="text-blue-100 font-medium max-w-sm">Juga minijocs tècnics per guanyar experiència. Vigila l'energia!</p>
+                    <p className="text-sm text-blue-200 mt-2 font-semibold">
+                        ⚡ Partida: <span className="text-red-300">-10 Energia</span><br/>
+                        ⭐ Bona actitud a classe: <span className="text-green-300">+30 Energia</span>
+                    </p>
 
-                    <div className="mt-6 inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 text-voltYellow font-bold">
-                        Tens {user.voltcoins} VoltCoins disponibles
+                    <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                        <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 text-voltYellow font-bold">
+                            Tens {user.energy} d'Energia disponible
+                        </div>
+                        
+                        <div className="bg-slate-900/50 backdrop-blur-md border border-slate-700 p-3 rounded-xl flex items-center gap-3 w-full sm:w-auto">
+                            <Target size={20} className="text-voltYellow" />
+                            <div className="flex flex-col">
+                                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Missió Actual</span>
+                                <span className="text-sm font-bold text-white">{user.current_mission}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -52,7 +66,7 @@ export default function Arcade({ addXP, deductVoltCoins, user }) {
                             onClick={() => setActiveGame('bug-finder')}
                             className="w-full bg-electricBlue text-white font-bold py-3 rounded-xl hover:bg-blue-700 transition-colors shadow-md shadow-blue-500/30 flex items-center justify-center gap-2"
                         >
-                            Jugar Ara <span className="flex items-center gap-1 text-voltYellow text-xs ml-2 bg-blue-800/50 px-2 py-0.5 rounded-full"><Zap size={12} className="fill-voltYellow" /> -10</span>
+                            Jugar Ara <span className="flex items-center gap-1 text-voltYellow text-xs ml-2 bg-blue-800/50 px-2 py-0.5 rounded-full"><Battery size={12} className="fill-voltYellow" /> -10</span>
                         </button>
                     </div>
                 </div>

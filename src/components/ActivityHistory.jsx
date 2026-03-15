@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, Activity, Plus, Minus, ArrowRight, Calendar } from 'lucide-react';
+import { Briefcase, Activity, Plus, Minus, ArrowRight, Calendar, History } from 'lucide-react';
 import ProjectModal from './ProjectModal';
 
 export default function ActivityHistory({ activities, behavior }) {
@@ -7,6 +7,10 @@ export default function ActivityHistory({ activities, behavior }) {
 
     return (
         <div className="flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="flex items-center gap-2 border-b border-slate-200 pb-4">
+                <History className="text-slate-800" size={28} />
+                <h1 className="text-3xl font-black text-slate-800">Historial de l'alumne</h1>
+            </div>
 
             {/* Secció Projectes STEAM */}
             <section>

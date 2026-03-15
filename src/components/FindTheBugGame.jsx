@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Gamepad2, Zap, Trophy, Bug, Lock, Play } from 'lucide-react';
+import { Gamepad2, Battery, Trophy, Bug, Lock, Play } from 'lucide-react';
 
 const MOCK_CODE_SNIPPETS = [
     {
@@ -13,9 +13,9 @@ const MOCK_CODE_SNIPPETS = [
     }
 ];
 
-export default function FindTheBugGame({ addXP, deductVoltCoins, user, onBack }) {
+export default function FindTheBugGame({ deductEnergy, user, onBack }) {
     const [level, setLevel] = useState(MOCK_CODE_SNIPPETS[0]);
-    const [gameState, setGameState] = useState('playing'); // playing, won, failed, no_coins
+    const [gameState, setGameState] = useState('playing'); // playing, won, failed, no_energy
     const [clickedLine, setClickedLine] = useState(null);
 
     const lines = level.code.split('\n');
@@ -23,17 +23,16 @@ export default function FindTheBugGame({ addXP, deductVoltCoins, user, onBack })
     const handleLineClick = (index) => {
         if (gameState !== 'playing') return;
 
-        if (user.voltcoins < level.cost) {
-            setGameState('no_coins');
+        if (user.energy < level.cost) {
+            setGameState('no_energy');
             return;
         }
 
         setClickedLine(index);
-        deductVoltCoins(level.cost);
+        deductEnergy(level.cost);
 
         if (index === level.buggyLine) {
             setGameState('won');
-            addXP(level.xpReward);
         } else {
             setGameState('failed');
         }
@@ -59,7 +58,7 @@ export default function FindTheBugGame({ addXP, deductVoltCoins, user, onBack })
                 </div>
                 <div className="flex gap-2">
                     <div className="flex items-center gap-1 bg-slate-800 px-3 py-1.5 rounded-full font-bold text-sm text-voltYellow">
-                        <Zap size={14} className="fill-voltYellow" /> -{level.cost}
+                        <Battery size={14} className="fill-voltYellow" /> -{level.cost}
                     </div>
                 </div>
             </div>
@@ -102,7 +101,7 @@ export default function FindTheBugGame({ addXP, deductVoltCoins, user, onBack })
             {/* Result Panel */}
             <div className={`p-6 transition-all duration-500 ease-out border-t-4 ${gameState === 'playing' ? 'bg-slate-50 border-transparent h-20 opacity-0 pointer-events-none hidden' :
                     gameState === 'won' ? 'bg-green-50 border-green-500' :
-                        gameState === 'no_coins' ? 'bg-yellow-50 border-voltYellow' : 'bg-red-50 border-red-500'
+                        gameState === 'no_energy' ? 'bg-yellow-50 border-voltYellow' : 'bg-red-50 border-red-500'
                 }`}>
                 {gameState === 'won' && (
                     <div className="flex flex-col items-center gap-3 animate-in slide-in-from-bottom-4 zoom-in-95 duration-500">
@@ -112,7 +111,7 @@ export default function FindTheBugGame({ addXP, deductVoltCoins, user, onBack })
                         <h3 className="text-xl font-black text-green-700">Bug Eliminat!</h3>
                         <p className="text-sm font-medium text-green-800 text-center">{level.explanation}</p>
                         <div className="mt-2 font-black text-2xl text-green-600 bg-white px-6 py-2 rounded-2xl shadow-sm">
-                            +{level.xpReward} XP
+                            ¡Molt bé! Has trencat el bucle.
                         </div>
                         <button onClick={onBack} className="mt-4 px-8 py-3 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-colors w-full">Torna a l'Arcade</button>
                     </div>
@@ -122,15 +121,15 @@ export default function FindTheBugGame({ addXP, deductVoltCoins, user, onBack })
                     <div className="flex flex-col items-center gap-3 animate-in slide-in-from-bottom-4 zoom-in-95 duration-500">
                         <h3 className="text-xl font-black text-red-600">Error Tàctic</h3>
                         <p className="text-sm font-medium text-red-700 text-center">Aquesta no era la línia problemàtica... El bug s'ha escapat!</p>
-                        <button onClick={resetGame} className="mt-4 px-8 py-3 bg-red-100 text-red-700 font-bold rounded-xl hover:bg-red-200 transition-colors w-full">Torna-ho a provar (-{level.cost} <Zap size={14} className="inline" />)</button>
+                        <button onClick={resetGame} className="mt-4 px-8 py-3 bg-red-100 text-red-700 font-bold rounded-xl hover:bg-red-200 transition-colors w-full">Torna-ho a provar (-{level.cost} <Battery size={14} className="inline" />)</button>
                         <button onClick={onBack} className="mt-2 px-8 py-3 bg-transparent text-slate-500 font-bold hover:text-slate-700 transition-colors">Sortir</button>
                     </div>
                 )}
 
-                {gameState === 'no_coins' && (
+                {gameState === 'no_energy' && (
                     <div className="flex flex-col items-center gap-3 animate-in slide-in-from-bottom-4 zoom-in-95 duration-500">
                         <h3 className="text-xl font-black text-yellow-700">Energia Insuficient</h3>
-                        <p className="text-sm font-medium text-yellow-800 text-center">Necessites més VoltCoins per activar el depurador aquest torn.</p>
+                        <p className="text-sm font-medium text-yellow-800 text-center">Necessites més Energia per activar el depurador aquest torn.</p>
                         <button onClick={onBack} className="mt-4 px-8 py-3 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-colors w-full">Torna a l'Arcade</button>
                     </div>
                 )}

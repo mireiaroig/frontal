@@ -25,9 +25,9 @@ export default function Navbar({ user, onAvatarClick }) {
                     </div>
 
                     <div className="flex items-center gap-3">
-                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full shadow-inner" title="Energy">
-                            <Zap size={20} className="text-voltYellow fill-voltYellow drop-shadow-[0_0_8px_rgba(255,255,0,0.8)]" />
-                            <span className="font-extrabold text-white text-lg">{user.voltcoins}</span>
+                        <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full shadow-inner" title="Energia Arcade">
+                            <Battery size={20} className="text-voltYellow fill-voltYellow drop-shadow-[0_0_8px_rgba(255,255,0,0.8)]" />
+                            <span className="font-extrabold text-white text-lg">{user.energy}</span>
                         </div>
                     </div>
                 </div>

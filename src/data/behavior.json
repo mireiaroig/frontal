@@ -2,21 +2,21 @@
     {
         "id": "b1",
         "date": "2026-03-10",
-        "action": "A judat a un company a trobar un error en el codi",
+        "action": "Ha ajudat a un company a trobar un error en el codi",
         "points": 15,
         "type": "positive"
     },
     {
         "id": "b2",
         "date": "2026-03-05",
-        "action": "Deixat el kit de robòtica fora de lloc i desorganitzat",
+        "action": "Ha deixat el kit de robòtica fora de lloc i desorganitzat",
         "points": -5,
         "type": "negative"
     },
     {
         "id": "b3",
         "date": "2026-02-28",
-        "action": "Gran presentació tècnica del projecte final de la setmana",
+        "action": "Ha fet una gran presentació tècnica del projecte final de la setmana",
         "points": 20,
         "type": "positive"
     }
